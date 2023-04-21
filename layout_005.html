@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃005</title>
+    <link rel="stylesheet" href="css/grid-guide.css">
+</head>
+<body>
+
+<div class="boxA">
+    <div class="boxA-1">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+        <div class="box4">box4</div>
+    </div>
+    <div class="boxA-2">box5</div>
+</div>
+
+<div class="boxB">box6</div>
+
+<div class="boxC">
+<div class="box7">box7</div>
+<div class="box8">box8</div>
+<div class="box9">box9</div>
+<div class="box10">box10</div>
+</div>
+
+<div class="boxD">
+<div class="box11">box11</div>
+<div class="box12">box12</div>
+<div class="box13">box13</div>
+</div>
+
+    <style>
+
+    /* flex 기반 가로정렬 */
+    /* boxA 설정 */
+    /* .boxA {display: flex; align-items: flex-start;}
+    .boxA-1 {width: 30%;}
+    .boxA-2 {width: 70%;} */
+
+    /* 박스C설정 */
+    /* .boxC {display: flex;}
+    .boxC div {flex-grow: 1;} */
+
+    /* 박스D설정 */
+    /* .boxD {display: flex;}
+    .boxD div {flex-grow: 1;} */
+
+    /* 부모자에 after 정렬 float:left 사용 */
+    /* 박스A설정 */
+    .boxA:after {content: ""; display: block; clear: both;}
+    .boxA-1 {float: left; width: 30%;}
+    .boxA-2 {float: left; width: 70%;}
+
+    /* 박스C설정 */
+    .boxC:after {content: ""; display: block; clear: both;}
+    .boxC div {float: left; width: 25%;}
+
+    /* 박스D설정 */
+    .boxD:after {content: ""; display: block; clear: both;}
+    .boxD div {float: left; width: 33.3333%;}
+
+    </style>
+</body>
+</html>

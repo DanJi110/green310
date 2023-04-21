@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃004</title>
+    <link rel="stylesheet" href="css/grid-guide.css">
+</head>
+<body>
+    <!-- <div class="boxA">
+        <div class="box1">로고</div>
+        <div class="box2">메뉴</div>
+    </div>
+    <div class="boxB">이미지슬라이드</div>
+    <div class="boxC">
+        <div class="box01">공지사항</div>
+        <div class="box02">배너</div>
+        <div class="box03">바로가기</div>
+    </div>
+    <div class="boxD">
+        <div class="box001">하단로고</div>
+        <div class="box002">
+            <div class="box002-1">하단메뉴</div>
+            <div class="box002-2">Copyright</div>
+        </div>
+    </div>
+
+    <style>
+        .boxA {display: flex;}
+        .box1 {width: 30%;}
+        .box2 {width: 70%;}
+
+        .boxC {display: flex; justify-content: center}
+        .box01 {width: 100%;}
+        .box02 {width: 100%;}
+        .box03 {width: 100%;}
+
+        .boxD {display: flex;} 
+        .box001 {width: 30%;}
+        .box002 {width: 70%;}
+    </style> -->
+
+    <!-- 선생님과 함께 -->
+    <div class="boxA">
+        <div class="box1">로고</div>
+        <div class="box2">메뉴</div>
+    </div>
+    <div class="boxB">이미지슬라이드</div>
+    <div class="boxC">
+        <div class="box3">공지사항</div>
+        <div class="box4">배너</div>
+        <div class="box5">바로가기</div>
+    </div>
+    <div class="boxD">
+        <div class="box6">하단로고</div>
+        <div class="box7">
+            <div class="box7-1">하단메뉴</div>
+            <div class="box7-2">카피라이트</div>
+        </div>
+    </div>
+
+    <style>
+        body {margin: 0;}
+        /* flex설정 */
+        /* boxA설정 */
+        /* .boxA {display: flex;}
+        .box1 {width: 20%;}
+        .box2 {width: 80%;} */
+
+        /* boxC설정 */
+        /* .boxC {display: flex;}
+        .boxC div {flex-grow: 1;} */
+        
+        /* boxD설정 */
+        /* .boxD {display: flex;}
+        .box6 {width: 20%;}
+        .box7 {width: 80%;} */
+
+        /* 부모자에 after 정렬 float:left 사용 */
+        /* boxA설정 */
+        .boxA:after {content: ""; display: block; clear: both;}
+        .box1 {float: left; width: 20%;}
+        .box2 {float: left; width: 80%;}
+
+        /* boxC설정 */
+        .boxC:after {content: ""; display: block; clear: both;}
+        .boxC div {float: left; width: 33.3333%;}
+        
+        /* boxD설정 */
+        .boxD {height: 450px;}
+        .boxD:after {content: ""; display: block; clear: both;}
+        .box6 {float: left; width: 20%; height: 100%;}
+        .box7 {float: left; width: 80%; height: 100%;}
+
+        .box7 div {height: 50%;}
+    </style>
+
+</body>
+</html>

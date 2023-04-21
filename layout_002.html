@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃002</title>
+    <link rel="stylesheet" href="css/grid-guide.css">
+</head>
+<body>
+
+    <!-- <div class="box1">박스1</div>
+
+    <div class="boxH">
+        <div class="box2-1">박스2-1</div>
+        <div class="box2-2">박스2-2</div>
+    </div>
+
+    <div class="box3">박스3</div>
+
+    <section class="boxA">
+        <article class="box001">박스4-1</article>
+        <article class="box002">박스4-2</article>
+        <article class="box003">박스4-3</article>
+    </section>
+
+    <style>
+        body {margin: 0;}
+        .boxH {display: flex;}
+        .box2-1 {width: 50%;}
+        .box2-2 {width: 50%;}
+
+        .box001 {width: 20%; float: left;}
+        .box002 {width: 60%; float: left;}
+        .box003 {width: 20%; float: left;}
+        .boxA:after {content: ""; display: block; clear: both;}
+    </style> -->
+
+
+    <!-- 선생님과 함께 -->
+
+        <div class="boxA">박스1</div>
+        <div class="boxB">
+            <div class="box2-1">박스2-1</div>
+            <div class="box2-2">박스2-2</div>
+        </div>
+        <div class="boxC">박스3</div>
+        <div class="boxD">
+            <div class="box4-1">박스4-1</div>
+            <div class="box4-2">박스4-2</div>
+            <div class="box4-3">박스4-3</div>
+        </div>
+
+        <style>
+
+            /* 부모자 after 정렬 방식 float:left 활용 */
+            /* 박스B설정 */
+            /* .boxB:after {content: ""; display: block; clear: both;}
+            .box2-1 {float: left; width: 50%;}
+            .box2-2 {float: left; width: 50%;} */
+            /* 박스D설정 */
+            /* .boxD:after {content: ""; display: block; clear: both;}
+            .box4-1 {float: left; width: 20%;}
+            .box4-2 {float: left; width: 60%;}
+            .box4-3 {float: left; width: 20%;} */
+
+            /* 부모자 flex 방식 */
+            /* 박스B설정 */
+            .boxB {display: flex;}
+            .boxB div {flex-grow: 1;}
+            /* 박스D설정 */
+            .boxD {display: flex;}
+            .box4-1 {width: 20%;}
+            .box4-2 {width: 60%;}
+            .box4-3 {width: 20%;}
+
+        </style>
+    
+
+</body>
+</html>
