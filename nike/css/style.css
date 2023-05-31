@@ -1,0 +1,203 @@
+@charset 'UTF-8';
+/* 폰트설정 */
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Play&display=swap');
+/* font-family: 'Monoton', cursive;
+font-family: 'Play', sans-serif; */
+
+/* 전체설정 */
+* {margin: 0; padding: 0;}
+a {color: #000; text-decoration: none;}
+ul, ol {list-style: none;}
+img {vertical-align: bottom;}
+body {width: 100%;
+    height: 100%;
+    position: fixed;}
+    /* 적응형 웹임을 알리는 방식과 같다 */
+
+/* 로고 */
+h1 {position: fixed;
+    left: 40px;
+    top: 40px;
+    z-index: 10;}
+h1 img {width: 280px;
+    height: auto;}
+
+/* 배경 동영상 */
+.vid {position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: -60px;
+    z-index: 1;}
+.vid video {width: 100%;
+    min-width: 1600px;}
+
+/* 헤더 */
+header {
+    background:linear-gradient(-45deg, #e6fc55, #b9fb05, #97e031);
+    position: fixed;
+    width: 700px;
+    height: 100%;
+    z-index: 8;
+    transform: skewX(-40deg);
+    left: -420px;
+}
+header .gnb {position: absolute;
+    right: 0;
+    top: 150px;
+    width: 220px;}
+header .gnb>li>a {
+    display: block;
+    text-align: right;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    font-family: 'Play', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+}
+header .gnb>li:hover>a {background-color: #111;
+                        color: #fff;}
+
+header em {display: inline-block;
+    transform: skewX(40deg);}
+
+/* 2 뎁스 설정 */
+header .gnb>li {position: relative;}
+header .gnb>li ul {position: absolute;
+                    display: none;
+                    left: 220px;
+                    top: 0;}
+header .gnb>li:hover ul {display: block;}
+header .gnb ul a {display: block;
+                    width: 150px;
+                    background-color: #222;
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #fff;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    padding-left: 50px;
+                    border-bottom: 1px solid #b9fb05;
+                    margin-bottom: 3px;
+                    }
+
+/* snsSet */
+.snsSet {
+    position: fixed;
+    right: 40px;
+    top: 40px;
+    z-index: 8;
+    display: flex;
+}
+.snsSet li {
+    margin-right: 20px;
+}
+.snsSet a {
+    color: #b9fb05;
+}
+.snsSet i {
+    font-size: 25px;
+    opacity: 0.5;
+    transition: all 0.3s;
+}
+
+.snsSet a:hover i {
+    transform: scale(1.2);
+    opacity: 1;}
+
+
+/* 히어로 텍스트 */
+section {
+    position: fixed;
+    top: 30%;
+    right: 200px;
+    z-index: 7;
+    width: 340px;
+    height: 280px;
+}
+section p:nth-child(1) {
+    font-family: 'Monoton', cursive;
+    font-size: 160px;
+    color: #b9fb05;}
+section p:nth-child(1) em {
+    font-size: 50px;
+    font-family: 'Play', sans-serif;
+    color: #fff;}
+section p:nth-child(2) {
+    font-size: 34px;
+    font-family: 'Play', sans-serif;
+    color: #bbb;
+    letter-spacing: -2px;
+    margin-top: -30px;
+}
+section p:nth-child(2) b {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #b9fb05;
+}
+
+
+
+
+
+/* 사이드 메뉴 */
+.side {
+    position: fixed;
+    z-index: 8;
+    width: 800px;
+    height: 100%;
+    right: -800px;
+    top: 0;
+    transform: skewX(-40deg);
+    background-color: #111;
+    opacity: 0.5;
+    transition: right 0.5s;
+}
+.side .con {
+    position: absolute;
+    width: 400px;
+    height: 100%;
+    left: 150px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #000;
+    transition: All 0.8s;
+}
+.side .con p {
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    left: 250px;
+}
+.side .con p:nth-child(3) {
+    bottom: 50px;
+    transition: All 1.2s;
+}
+.side .con p:nth-child(2) {
+    bottom: 170px;
+    transition: All 1.4s;
+}
+.side .con p:nth-child(1) {
+    bottom: 290px;
+    transition: All 1.6s;
+}
+.side .con em {
+    color: #a0bd50;
+    display: block;
+    transform: skewX(40deg);
+}
+.side .con img {
+    width: 300px;
+}
+
+.side:hover {
+    right: -500px;
+}
+.side:hover .con {
+    left: 50px;
+}
+.side:hover p {
+    left: 50px;
+}
