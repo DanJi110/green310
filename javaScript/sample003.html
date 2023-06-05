@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자동슬라이드예제3</title>
+    <!-- 제이쿼리 CDN -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function(){
+
+        // btn li 를 클릭했을 때 slide 의 li 가 같은 순번을 찾아 움직여라
+        $('.btn li').click(function(){
+            let i = $(this).index()
+            console.log(i)
+            $('.slide li').eq(i-1).stop().css({'left':'0'}).animate({'left':'-100%'},800)
+            $('.slide li').eq(i).stop().css({'left':'100%'}).animate({'left':'0'},800)
+
+            $('.btn li').removeClass('on')
+            $(this).addClass('on')
+
+            
+        });
+
+        // 3초에 한 번씩 자동으로 컴퓨터가 btn li (0,1,2) 를 클릭해라
+        let a = 0;
+        setInterval(function(){
+            a++;
+            if(a==3)a=0;
+            console.log(a)
+            $('.btn li').eq(a).trigger('click')
+            // trigger 핸들러를 통해 마우스를 제어하는 구조
+            },3000);
+
+
+
+
+            
+        // btn1 의 li 를 클릭했을 때 slide1 의 li 가 같은 순번을 찾아 움직여라
+        $('.btn1 li').click(function(){
+            let i = $(this).index()
+            console.log(i)
+            $('.slide1 li').eq(i-1).stop().css({'top':'0'}).animate({'top':'100%'},800)
+            $('.slide1 li').eq(i).stop().css({'top':'-100%'}).animate({'top':'0'},800)
+
+            $('.btn1 li').removeClass('on1')
+            $(this).addClass('on1')
+        });
+
+        // 3초에 한 번씩 자동으로 컴퓨터가 btn1 li (0,1,2) 를 클릭해라
+        let b = 0;
+        setInterval(function(){
+            b++;
+            if(b==3)b=0;
+            console.log(b)
+            $('.btn1 li').eq(b).trigger('click')
+        },3000);
+
+
+
+        })
+    </script>
+</head>
+<body>
+    
+    <div id="wrap">
+        <div class="slide">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </div>
+        <div class="btn">
+            <ul>
+                <li class="on">1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="wrap1">
+        <div class="slide1">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </div>
+        <div class="btn1">
+            <ul>
+                <li class="on1">1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+
+        #wrap {
+            position: relative;
+        }
+        .slide {
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            position: relative;
+        }
+        .slide ul {
+            width: auto;
+            height: 500px;
+        }
+        .slide li {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 100%;
+            top: 0;
+            text-indent: -9999px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .slide li:nth-child(1) {
+            left: 0;
+            background-image: url(slide/img/0.png);
+        }
+        .slide li:nth-child(2) {
+            background-image: url(slide/img/1.png);
+        }
+        .slide li:nth-child(3) {
+            background-image: url(slide/img/2.png);
+        }
+
+
+        .btn {
+            position: absolute;
+            width: 54px;
+            left: 50%;
+            margin-right: -27px;
+            bottom: 70px;
+        }
+        .btn ul {
+            display: flex;
+        }
+        .btn li {
+            width: 14px;
+            height: 14px;
+            border-radius: 7px;
+            background-color: #ffff;
+            opacity: 0.6;
+            margin: 0 2px;
+            text-indent: -9999px;
+        }
+        .btn li.on {
+            background-color: #000;
+            opacity: 1;
+        }
+
+
+
+/* wrap1 */
+
+
+
+        #wrap1 {
+            position: relative;
+        }
+        .slide1 {
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            position: relative;
+        }
+        .slide1 ul {
+            width: auto;
+            height: 500px;
+        }
+        .slide1 li {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: -100%;
+            left: 0%;
+            text-indent: -9999px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .slide1 li:nth-child(1) {
+            top: 0;
+            background-image: url(slide/img/soft1.jpg);
+        }
+        .slide1 li:nth-child(2) {
+            background-image: url(slide/img/soft2.jpg);
+        }
+        .slide1 li:nth-child(3) {
+            background-image: url(slide/img/soft3.png);
+        }
+
+
+        .btn1 {
+            position: absolute;
+            width: 54px;
+            left: 10%;
+            margin-right: -27px;
+            bottom: 200px;
+        }
+        .btn1 ul {
+        }
+        .btn1 li {
+            width: 14px;
+            height: 14px;
+            border-radius: 7px;
+            background-color: blue;
+            opacity: 0.8;
+            margin: 10px 0;
+            text-indent: -9999px;
+        }
+        .btn1 li.on1 {
+            background-color: yellow;
+            opacity: 1;
+        }
+
+    </style>
+
+
+
+</body>
+</html>
