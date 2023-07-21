@@ -1,0 +1,134 @@
+@charset 'UTF-8';
+
+/* 전체설정 */
+* {
+    margin: 0;
+    padding: 0;
+}
+ul, ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+img {
+    vertical-align: bottom;
+}
+
+/* 로고 */
+h1 {
+    position: fixed;
+    font-size: 50px;
+    left: 50px;
+    top: 50px;
+}
+
+/* 내비 */
+nav {
+    position: fixed;
+    left: 50px;
+    top: 50%;
+    margin-top: -120px;
+    z-index: 999;
+}
+nav li {
+    margin-bottom: 2px;
+}
+nav li a {
+    display: flex;
+    width: 200px;
+    height: 60px;
+    font-size: 14px;
+    align-items: center;
+    justify-content: flex-end;
+    border-bottom: 2px solid red;
+    transition: all 0.8s;
+}
+nav li a:hover {
+    border-color: black;
+    color: red;
+}
+nav li.on a {
+    border-color: black;
+    color: red;
+}
+
+/* 섹션 */
+#wrap {
+    position: relative;
+    z-index: 1;
+}
+#wrap section {
+    width: 100%;
+    height: 700px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right center;
+    position: relative;
+    overflow: hidden;
+}
+section:nth-child(1) {
+    background-image: url(../img/bg1.jpg);
+}
+section:nth-child(2) {
+    background-image: url(../img/bg2.jpg);
+}
+section:nth-child(3) {
+    background-image: url(../img/bg3.jpg);
+}
+section:nth-child(4) {
+    background-image: url(../img/bg4.jpg);
+}
+
+/* section 별 움직이는 img */
+section img {
+    position: absolute;
+}
+/* 첫 번째 section */
+.p11 {
+    bottom: 20px;
+    right: 20px;
+}
+.p12 {
+    bottom: -40px;
+    right: 130px;
+}
+.p13 {
+    top: 180px;
+    right: 60px;
+}
+
+/* 두 번째 section */
+.p21 {
+    bottom: -480px;
+    right:-180px
+}
+.p22 {
+    bottom: -40px;
+    right: 130px;
+}
+
+/* 세 번째 section */
+.p31 {
+    bottom: 30px;
+    right: 180px;
+}
+.p32 {
+    bottom: -270px;
+    right: 110px;
+}
+.p33 {
+    bottom: -130px;
+    right: -70px;
+}
+
+/* 네 번째 section */
+.p41 {
+    bottom: -120px;
+    right: 20px;
+}
+.p42 {
+    bottom: -180px;
+    right: 0;
+}
